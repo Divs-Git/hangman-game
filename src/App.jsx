@@ -1,11 +1,13 @@
-import React from 'react'
-import TextInputFormContainer from './components/forms/TextInputFormContainer'
+import { Route, Routes } from 'react-router-dom'
+import PlayGame from './pages/PlayGame'
+import StartGame from './pages/StartGame'
 
 const App = () => {
   return (
-    <React.Fragment>
-      <TextInputFormContainer />
-    </React.Fragment>
+    <Routes>
+      <Route path='/' element={<StartGame />} />
+      <Route path='/play' element={<PlayGame />} />
+    </Routes>
   )
 }
 
