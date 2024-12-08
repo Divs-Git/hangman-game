@@ -6,12 +6,11 @@
  *  @returns -> H_M_E
  */
 
-export function getAllCharacter(orginalWord, guessedLetters) {
+export default function getAllCharacter(orginalWord, guessedLetters) {
   guessedLetters = guessedLetters.map((letter) => letter.toUpperCase());
   const guessedLettersSet = new Set(guessedLetters);
   return orginalWord
     .toUpperCase()
     .split("")
-    .map((char) => (guessedLettersSet.has(char) ? char : "_")) // ['H','_','M','_','_','E']
-    .join("");
+    .map((char) => (guessedLettersSet.has(char) ? char : "_")); // ['H','_','M','_','_','E']
 }
