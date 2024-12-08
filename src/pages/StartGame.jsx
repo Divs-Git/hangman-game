@@ -1,9 +1,10 @@
 import React from 'react'
+import TextInputFormContainer from '../components/forms/TextInputFormContainer'
 
 const StartGame = () => {
   return (
     <React.Fragment>
-      <h1>Start Game</h1>
+      <TextInputFormContainer />
     </React.Fragment>
   )
 }
